@@ -1,0 +1,48 @@
+body
+  background #6ceddf
+  font-family Helvetica, sans-serif
+  color #575757
+
+h1
+  padding-bottom .5em
+  border-bottom 2px solid red
+
+.align-center
+  text-align center
+
+.ball
+  position absolute
+  transform-style preserve-3d
+  top 70%
+  left 50%
+  transform translate(-50%, -50%)
+  transition left 0.5s
+  animation sillyBounce 1s cubic-bezier(0.4, 0, 1, 1) infinite alternate;
+  &:hover
+    left 0
+
+@keyframes sillyBounce {
+  0% {
+    transform: translate(-50%, -1000%) scaleX(1) scaleY(1);
+  }
+
+  65% {
+    transform: translate(-50%, 0) scaleX(1) scaleY(1);
+  }
+
+  70% {
+    transform: translate(-50%, 20%) scaleX(1.4) scaleY(.6);
+  }
+
+  80% {
+    transform: translate(-50%, -10%) scaleX(.8) scaleY(1.2);
+  }
+
+  90% {
+    transform: translate(-50%, 5%) scaleX(1.1) scaleY(.9);
+  }
+
+  100% {
+    transform: translate(-50%, 0) scaleX(1) scaleY(1);
+  }
+}

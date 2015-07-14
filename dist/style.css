@@ -1,0 +1,81 @@
+body {
+  background: #6ceddf;
+  font-family: Helvetica, sans-serif;
+  color: #575757;
+}
+h1 {
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #f00;
+}
+.align-center {
+  text-align: center;
+}
+.ball {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: left 0.5s;
+          transition: left 0.5s;
+  -webkit-animation: sillyBounce 1s cubic-bezier(0.4, 0, 1, 1) infinite alternate;
+          animation: sillyBounce 1s cubic-bezier(0.4, 0, 1, 1) infinite alternate;
+}
+.ball:hover {
+  left: 0;
+}
+@-webkit-keyframes sillyBounce {
+  0% {
+    -webkit-transform: translate(-50%, -1000%) scaleX(1) scaleY(1);
+            transform: translate(-50%, -1000%) scaleX(1) scaleY(1);
+  }
+  65% {
+    -webkit-transform: translate(-50%, 0) scaleX(1) scaleY(1);
+            transform: translate(-50%, 0) scaleX(1) scaleY(1);
+  }
+  70% {
+    -webkit-transform: translate(-50%, 20%) scaleX(1.4) scaleY(0.6);
+            transform: translate(-50%, 20%) scaleX(1.4) scaleY(0.6);
+  }
+  80% {
+    -webkit-transform: translate(-50%, -10%) scaleX(0.8) scaleY(1.2);
+            transform: translate(-50%, -10%) scaleX(0.8) scaleY(1.2);
+  }
+  90% {
+    -webkit-transform: translate(-50%, 5%) scaleX(1.1) scaleY(0.9);
+            transform: translate(-50%, 5%) scaleX(1.1) scaleY(0.9);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0) scaleX(1) scaleY(1);
+            transform: translate(-50%, 0) scaleX(1) scaleY(1);
+  }
+}
+@keyframes sillyBounce {
+  0% {
+    -webkit-transform: translate(-50%, -1000%) scaleX(1) scaleY(1);
+            transform: translate(-50%, -1000%) scaleX(1) scaleY(1);
+  }
+  65% {
+    -webkit-transform: translate(-50%, 0) scaleX(1) scaleY(1);
+            transform: translate(-50%, 0) scaleX(1) scaleY(1);
+  }
+  70% {
+    -webkit-transform: translate(-50%, 20%) scaleX(1.4) scaleY(0.6);
+            transform: translate(-50%, 20%) scaleX(1.4) scaleY(0.6);
+  }
+  80% {
+    -webkit-transform: translate(-50%, -10%) scaleX(0.8) scaleY(1.2);
+            transform: translate(-50%, -10%) scaleX(0.8) scaleY(1.2);
+  }
+  90% {
+    -webkit-transform: translate(-50%, 5%) scaleX(1.1) scaleY(0.9);
+            transform: translate(-50%, 5%) scaleX(1.1) scaleY(0.9);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0) scaleX(1) scaleY(1);
+            transform: translate(-50%, 0) scaleX(1) scaleY(1);
+  }
+}
